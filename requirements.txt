@@ -1,9 +1,10 @@
 streamlit
 numpy==1.26.4
-pandas
-scikit-learn
+scipy==1.13.1
+pandas==2.2.3
+scikit-learn==1.6.1
 nltk
-gensim
+gensim==4.3.3
 joblib
 beautifulsoup4
 rapidfuzz
