@@ -1,10 +1,10 @@
-python-Levenshtein
 streamlit
 numpy>=1.24,<2.0
 pandas
 scikit-learn
 nltk
 gensim==4.3.2
+scipy==1.12.0
 joblib
 beautifulsoup4
 rapidfuzz
