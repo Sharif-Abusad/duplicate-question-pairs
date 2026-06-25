@@ -1,12 +1,11 @@
+python-Levenshtein
 streamlit
-numpy==1.26.4
+numpy>=1.24,<2.0
 pandas
 scikit-learn
 nltk
-gensim
+gensim==4.3.2
 joblib
 beautifulsoup4
 rapidfuzz
-distance
-fuzzywuzzy
 python-Levenshtein
