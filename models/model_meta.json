@@ -1,12 +1,12 @@
 {
-  "model": "RandomForestClassifier",
-  "best_threshold": 0.45,
-  "train_rows": 159991,
+  "model": "XGBClassifier",
+  "best_threshold": 0.35,
+  "train_rows": 159990,
   "test_rows": 39998,
   "metrics": {
-    "accuracy": 0.8086,
-    "f1_score": 0.7643,
-    "roc_auc": 0.904,
-    "avg_precision": 0.8414
+    "accuracy": 0.8015,
+    "f1_score": 0.7626,
+    "roc_auc": 0.9026,
+    "avg_precision": 0.8336
   }
 }
