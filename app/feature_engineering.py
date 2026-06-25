@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
 
 from rapidfuzz import fuzz           # replaces fuzzywuzzy
 from rapidfuzz import distance     
-
+from difflib import SequenceMatcher
 from typing import List
 
 # ------------------------------------------------------------------
@@ -111,14 +111,14 @@ def fetch_length_features(q1: str, q2: str) -> List[float]:
     # Average token length of both Questions
     length_features[1] = (len(q1_tokens) + len(q2_tokens)) / 2
 
-    strs = list(distance.lcsubstrings(q1, q2))
+    match = SequenceMatcher(
+        None, q1, q2
+    ).find_longest_match(
+        0, len(q1),
+        0, len(q2)
+    )
 
-    # strs[0] will raise indexOutOfBound exception when there is no common string (i.e strs = [])
-
-    if strs:  # when common string present
-        length_features[2] = len(strs[0]) / (min(len(q1), len(q2)) + 1)
-    else:
-        length_features[2] = 0.0  # no common string
+    length_features[2] = match.size
 
     return length_features
 
