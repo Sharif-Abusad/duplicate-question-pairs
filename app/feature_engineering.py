@@ -6,8 +6,10 @@ Feature engineering utilities for Quora Question Pair Similarity.
 
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
-import distance
-from fuzzywuzzy import fuzz
+
+from rapidfuzz import fuzz           # replaces fuzzywuzzy
+from rapidfuzz import distance     
+
 from typing import List
 
 # ------------------------------------------------------------------
